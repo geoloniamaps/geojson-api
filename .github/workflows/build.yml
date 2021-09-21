@@ -15,11 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a one-line script
-        run: echo Hello, world!
-
       - name: Run `npm install -g csv2geojson`
         run: npm install -g csv2geojson
+
       - name: Convert CSV to GeoJSON
         run: |
           cd $GITHUB_WORKSPACE
