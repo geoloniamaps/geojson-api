@@ -16,7 +16,8 @@
 
 ## GitHub Pages の設定方法
 
-* GitHub のリポジトリのメニューの [[Settings] 内の [GitHub Pages]](./settings/pages) で、以下のように設定してください。
+* GitHub のリポジトリのメニューの中にある [Settings] をクリックしてください。
+* 移動先のページの下の方にある [GitHub Pages] のところで、以下のように設定してください。
 
 ![](https://www.evernote.com/l/ABXqA26fEitDNZG6KDxX-Os6Qb8gciGRKSYB/image.png)
 
