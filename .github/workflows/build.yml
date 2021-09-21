@@ -36,3 +36,11 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           csv2geojson ./data.csv > data.json
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          force_orphan: true
