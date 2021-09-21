@@ -34,4 +34,4 @@ jobs:
         run: |
           npm install -g csv2geojson
           cd $GITHUB_WORKSPACE
-          cat data.csv
+          csv2geojson ./data.csv
