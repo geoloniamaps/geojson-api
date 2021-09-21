@@ -5,7 +5,7 @@
 ## ご利用方法
 
 * [[Use this template]](https://github.com/geoloniamaps/csv2geojson/generate) ボタンをクリックして、このテンプレートを自分のリポジトリにコピーしてください。
-* `data.csv` を編集してコミットすると数分後に GeoJSON が生成され、`https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/data.json` のような URL でアクセスできます。
+* `data.csv` を編集してコミットすると数分後に GeoJSON が生成され、`https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/data.json` のような URL でアクセスできます。（[サンプル URL](https://geoloniamaps.github.io/csv2geojson/data.json)）
 
 ### Google スプレッドシートで CSV を編集する
 
