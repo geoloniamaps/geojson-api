@@ -21,7 +21,7 @@ jobs:
       - name: Convert CSV to GeoJSON
         run: |
           cd $GITHUB_WORKSPACE
-          csv2geojson ./data.csv > data.json
+          for file in *.csv; { csv2geojson "$file" > ./$(basename -s ".csv" $file).json; }
 
       - name: Deploy the GeoJSON to `gh-pages`
         uses: peaceiris/actions-gh-pages@v3
