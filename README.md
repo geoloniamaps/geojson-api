@@ -28,7 +28,7 @@
 * 地図を表示したい場所に以下のような HTML を設置してください。
 
 ```
-<div class="geolonia" data-geojson="https://geoloniamaps.github.io/csv2geojson/data.json"></div>
+<div class="geolonia" data-geojson="<GeoJSON の URL>"></div>
 ```
 
 ### デモ: 
