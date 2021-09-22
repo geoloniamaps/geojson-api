@@ -12,8 +12,8 @@ Geolonia Maps なら以下のような簡単なマークアップで地図に表
 
 ## ご利用方法
 
-* [[Use this template]](https://github.com/geoloniamaps/csv2geojson/generate) ボタンをクリックして、このテンプレートを自分のリポジトリにコピーしてください。
-* `example.csv` を編集してコミットすると数分後に GeoJSON が生成され、`https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/<ファイル名>.json` のような URL でアクセスできます。（[サンプル URL](https://geoloniamaps.github.io/csv2geojson/example.json)）
+* [[Use this template]](https://github.com/geoloniamaps/geojson-api/generate) ボタンをクリックして、このテンプレートを自分のリポジトリにコピーしてください。
+* `example.csv` を編集してコミットすると数分後に GeoJSON が生成され、`https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/<ファイル名>.json` のような URL でアクセスできます。（[サンプル URL](https://geoloniamaps.github.io/geojson-api/example.json)）
 * 任意のファイル名の CSV を複数設置することも可能です。
 * 点データのみに対応しています。
 
@@ -41,13 +41,9 @@ Geolonia Maps なら以下のような簡単なマークアップで地図に表
 <div class="geolonia" data-geojson="<GeoJSON の URL>"></div>
 ```
 
-### デモ: 
+デモ: https://codepen.io/geolonia/pen/RwgJjmE
 
-[![](https://www.evernote.com/l/ABXqj0bWP2hLzJ6LkXidrapwc3eJstLY3ScB/image.png)](https://codepen.io/geolonia/pen/RwgJjmE)
-
-https://codepen.io/geolonia/pen/RwgJjmE
-
-[詳細はドキュメンテーションをご参照ください。](https://docs.geolonia.com/tutorial/008/#%E5%A4%96%E9%83%A8%E3%81%AE-geojson-%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80)
+[詳しくは Geolonia Maps ドキュメンテーションを御覧ください。](https://docs.geolonia.com/)
 
 ## CSV の各列の解説
 
