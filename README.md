@@ -17,7 +17,7 @@
 ### Google スプレッドシートで CSV を編集する
 
 1. [こちらのサンプルデータ](https://docs.google.com/spreadsheets/d/125tgFwGwkdEX5rapUMQuzVQ0BPshHkU0K_snFagOzwk/edit#gid=0) ををコピーして、ご自身のデータを入力してください。
-2. 入力したデータを CSV でエクスポートして、その内容を `data.csv` に上書きしてください。
+2. 入力したデータを CSV でエクスポートして、それを任意のファイル名でコミットしてください。
 
 緯度経度の取得には、[Community Geocoder](https://community-geocoder.geolonia.com/#12/35.68124/139.76713) をご利用することをご推奨します。
 
@@ -30,7 +30,7 @@
 
 ## Geolonia Maps での地図の表示方法
 
-* 保存された CSV は GitHub Actions によって、自動的に GeoJSON に変換されます。GeoJSON は、上述のように `https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/data.json` のような URL でアクセスできますので、ブラウザで URL を確認した後、その URL をコピーしてください。
+* 保存された CSV は GitHub Actions によって、自動的に GeoJSON に変換されます。GeoJSON は、上述のように `https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/<ファイル名>.json` のような URL でアクセスできますので、ブラウザで URL を確認した後、その URL をコピーしてください。
 * [Geolonia Maps の API キーを取得](https://docs.geolonia.com/tutorial/002/) して、[JavaScript API を設置](https://docs.geolonia.com/tutorial/003/)  してください。
 * 地図を表示したい場所に以下のような HTML を設置してください。
 
