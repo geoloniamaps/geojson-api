@@ -2,17 +2,20 @@
 
 このリポジトリは、CSV フォーマットのデータを GitHub Actions で GeoJSON に変換し API として公開するためのテンプレートリポジトリです。
 
-## 主な機能
+Geolonia Maps なら以下のような簡単なマークアップで地図に表示することが可能です。
 
-* CSV に記述されたデータを GeoJSON に変換し GitHub Pages に自動的にデプロイします。
-* 各列の値は、GeoJSON の `properties` に保存されます。
-* 複数の CSV がある場合、それぞれの CSV データを、GeoJSON に変換します。
-* 点データのみに対応しています。
+```
+<div class="geolonia" data-geojson="<GeoJSON の URL>"></div>
+```
+
+デモ: https://codepen.io/geolonia/pen/RwgJjmE
 
 ## ご利用方法
 
 * [[Use this template]](https://github.com/geoloniamaps/csv2geojson/generate) ボタンをクリックして、このテンプレートを自分のリポジトリにコピーしてください。
-* `data.csv` を編集してコミットすると数分後に GeoJSON が生成され、`https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/<ファイル名>.json` のような URL でアクセスできます。（[サンプル URL](https://geoloniamaps.github.io/csv2geojson/example.json)）
+* `example.csv` を編集してコミットすると数分後に GeoJSON が生成され、`https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/<ファイル名>.json` のような URL でアクセスできます。（[サンプル URL](https://geoloniamaps.github.io/csv2geojson/example.json)）
+* 任意のファイル名の CSV を複数設置することも可能です。
+* 点データのみに対応しています。
 
 ### Google スプレッドシートで CSV を編集する
 
