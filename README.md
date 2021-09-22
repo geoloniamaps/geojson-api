@@ -6,11 +6,13 @@
 
 * CSV に記述されたデータを GeoJSON に変換し GitHub Pages に自動的にデプロイします。
 * 各列の値は、GeoJSON の `properties` に保存されます。
+* 複数の CSV がある場合、それぞれの CSV データを、GeoJSON に変換します。
+* 点データのみに対応しています。
 
 ## ご利用方法
 
 * [[Use this template]](https://github.com/geoloniamaps/csv2geojson/generate) ボタンをクリックして、このテンプレートを自分のリポジトリにコピーしてください。
-* `data.csv` を編集してコミットすると数分後に GeoJSON が生成され、`https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/data.json` のような URL でアクセスできます。（[サンプル URL](https://geoloniamaps.github.io/csv2geojson/data.json)）
+* `data.csv` を編集してコミットすると数分後に GeoJSON が生成され、`https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/<ファイル名>.json` のような URL でアクセスできます。（[サンプル URL](https://geoloniamaps.github.io/csv2geojson/example.json)）
 
 ### Google スプレッドシートで CSV を編集する
 
@@ -46,19 +48,22 @@ https://codepen.io/geolonia/pen/RwgJjmE
 
 ## CSV の各列の解説
 
-* `title` - ここに入力された文字列は、マーカーの下にタイトルとして表示されます。
-* `description` - マーカーをクリックした際に、ポップアップで表示させるコンテンツです。
-* `lat` - 緯度を指定してください。 (例: `35.6321`)
-* `lng` - 経度を指定してください。 (例: `139.8808`)
-* `marker-size` - `medium`、`large`、`small` のいずれかを指定してください。
-* `marker-color` - マーカーの色を RGB で指定してください。 (例: `#FF0000`)
-* `stroke` - マーカーの境界線の色を RGB で指定してください。 (例: `#FFFFFF`)
-* `stroke-width` - 境界線の太さ（ピクセル）を数字で指定してください。 (例: `2`)
+|列名|必須|デフォルト|内容|
+|-|-|-|-|
+|`title`|○||ここに入力された文字列は、マーカーの下にタイトルとして表示されます。|
+|`lat`|○||緯度を指定してください。 (例: `35.6321`)|
+|`lng`|○||`lng` - 必須。経度を指定してください。 (例: `139.8808`)|
+|`description`|||マーカーをクリックした際に、ポップアップで表示させるコンテンツです。|
+|`marker-size`||`middle`|`medium`、`large`、`small` のいずれかを指定してください。|
+|`marker-color`||`rgba(255, 0, 0, 0.4)`|マーカーの色を指定してください。|
+|`stroke`||`#FFFFFF`|マーカーの輪郭線の色を RGB で指定してください。|
+|`stroke-width`||`2`|境界線の太さ（ピクセル）を数字で指定してください。|
 
-サンプル CSV は、以下の URL にあります。
+### 備考
 
-https://docs.google.com/spreadsheets/d/125tgFwGwkdEX5rapUMQuzVQ0BPshHkU0K_snFagOzwk/edit#gid=0
-
-データの仕様については、Geolonia Maps のドキュメンテーションもご参照ください。
-
-https://docs.geolonia.com/geojson/
+* `marker-color` は、`#FF0000` または `rgba(255,0,0)` のように指定することが可能です。
+* 列の順番に制約はありません。
+* `description` では、HTML も利用可能です。
+* 上記にない列は、`properties` に保存されますが、これらの値を利用するには JavaScript によるプログラミングが必要です。
+* [サンプル CSV は、こちらにあります。](https://docs.google.com/spreadsheets/d/125tgFwGwkdEX5rapUMQuzVQ0BPshHkU0K_snFagOzwk/edit#gid=0)
+* データの仕様については、Geolonia Maps の[ドキュメンテーション](https://docs.geolonia.com/geojson/)もご参照ください。
