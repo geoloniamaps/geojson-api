@@ -1,6 +1,11 @@
-# csv2geojson
+# GeoJSON API
 
 このリポジトリは、CSV フォーマットのデータを GitHub Actions で GeoJSON に変換し API として公開するためのテンプレートリポジトリです。
+
+## 主な機能
+
+* CSV に記述されたデータを GeoJSON に変換し GitHub Pages に自動的にデプロイします。
+* 各列の値は、GeoJSON の `properties` に保存されます。
 
 ## ご利用方法
 
