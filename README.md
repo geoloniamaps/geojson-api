@@ -19,7 +19,7 @@ Geolonia Maps なら以下のような簡単なマークアップで地図に表
 
 ### Google スプレッドシートで CSV を編集する
 
-1. [こちらのサンプルデータ](https://docs.google.com/spreadsheets/d/125tgFwGwkdEX5rapUMQuzVQ0BPshHkU0K_snFagOzwk/edit#gid=0) ををコピーして、ご自身のデータを入力してください。
+1. [こちらのサンプルデータ](https://docs.google.com/spreadsheets/d/125tgFwGwkdEX5rapUMQuzVQ0BPshHkU0K_snFagOzwk/edit#gid=0) をコピーして、ご自身のデータを入力してください。
 2. 入力したデータを CSV でエクスポートして、それを任意のファイル名でコミットしてください。
 
 緯度経度の取得には、[Community Geocoder](https://community-geocoder.geolonia.com/#12/35.68124/139.76713) をご利用することをご推奨します。
