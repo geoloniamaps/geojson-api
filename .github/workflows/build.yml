@@ -25,6 +25,9 @@ jobs:
         with:
           input_dir: './'
 
+      - name: get current directory
+        run: pwd
+
       - name: show files in current directory
         run: ls -la
 
@@ -33,7 +36,7 @@ jobs:
 
       - name: show files in current directory
         run: ls -la
-        
+
       - name: Deploy the GeoJSON to `gh-pages`
         uses: peaceiris/actions-gh-pages@v3
         with:
