@@ -25,9 +25,6 @@ jobs:
         with:
           input_dir: './'
 
-      - name: get current directory
-        run: pwd
-
       - name: Convert CSV to GeoJSON
         run: for file in *.csv; { csv2geojson "$file" > ./$(basename -s ".csv" $file).json; }
 
