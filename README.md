@@ -1,6 +1,6 @@
 # GeoJSON API
 
-このリポジトリは、CSV フォーマットのデータを GitHub Actions で GeoJSON に変換し API として公開するためのテンプレートリポジトリです。
+このリポジトリは、CSV もしくは Excel フォーマットのデータを GitHub Actions で GeoJSON に変換し API として公開するためのテンプレートリポジトリです。
 
 Geolonia Maps なら以下のような簡単なマークアップで地図に表示することが可能です。
 
@@ -14,13 +14,13 @@ Geolonia Maps なら以下のような簡単なマークアップで地図に表
 
 * [[Use this template]](https://github.com/geoloniamaps/geojson-api/generate) ボタンをクリックして、このテンプレートを自分のリポジトリにコピーしてください。
 * `example.csv` を編集してコミットすると数分後に GeoJSON が生成され、`https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/<ファイル名>.json` のような URL でアクセスできます。（[サンプル URL](https://geoloniamaps.github.io/geojson-api/example.json)）
-* 任意のファイル名の CSV を複数設置することも可能です。
+* 任意のファイル名の CSV および、Excel を複数設置することも可能です。
 * 点データのみに対応しています。
 
-### Google スプレッドシートで CSV を編集する
+### Google スプレッドシートでデータを編集する
 
 1. [こちらのサンプルデータ](https://docs.google.com/spreadsheets/d/125tgFwGwkdEX5rapUMQuzVQ0BPshHkU0K_snFagOzwk/edit#gid=0) をコピーして、ご自身のデータを入力してください。
-2. 入力したデータを CSV でエクスポートして、それを任意のファイル名でコミットしてください。
+2. 入力したデータを CSV もしくは、Excel でエクスポートして、それを任意のファイル名でコミットしてください。
 
 緯度経度の取得には、[Community Geocoder](https://community-geocoder.geolonia.com/#12/35.68124/139.76713) をご利用することをご推奨します。
 
@@ -33,7 +33,7 @@ Geolonia Maps なら以下のような簡単なマークアップで地図に表
 
 ## Geolonia Maps での地図の表示方法
 
-* 保存された CSV は GitHub Actions によって、自動的に GeoJSON に変換されます。GeoJSON は、上述のように `https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/<ファイル名>.json` のような URL でアクセスできますので、ブラウザで URL を確認した後、その URL をコピーしてください。
+* 保存された CSV もしくは Excel は GitHub Actions によって、自動的に GeoJSON に変換されます。GeoJSON は、上述のように `https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/<ファイル名>.json` のような URL でアクセスできますので、ブラウザで URL を確認した後、その URL をコピーしてください。
 * [Geolonia Maps の API キーを取得](https://docs.geolonia.com/tutorial/002/) して、[JavaScript API を設置](https://docs.geolonia.com/tutorial/003/)  してください。
 * 地図を表示したい場所に以下のような HTML を設置してください。
 
@@ -45,7 +45,7 @@ Geolonia Maps なら以下のような簡単なマークアップで地図に表
 
 [詳しくは Geolonia Maps ドキュメンテーションを御覧ください。](https://docs.geolonia.com/)
 
-## CSV の各列の解説
+## データの各列の解説
 
 |列名|必須|デフォルト|内容|
 |-|-|-|-|
@@ -66,3 +66,5 @@ Geolonia Maps なら以下のような簡単なマークアップで地図に表
 * 上記にない列は、`properties` に保存されますが、これらの値を利用するには JavaScript によるプログラミングが必要です。
 * [サンプル CSV は、こちらにあります。](https://docs.google.com/spreadsheets/d/125tgFwGwkdEX5rapUMQuzVQ0BPshHkU0K_snFagOzwk/edit#gid=0)
 * データの仕様については、Geolonia Maps の[ドキュメンテーション](https://docs.geolonia.com/geojson/)もご参照ください。
+* Excel をアップロード時に、JSON として出力される値は、Excel のセル書式で指定された値が出力されます。
+* Excel をアップロード時、日付（セル書式：日付、ユーザー定義）については、`m/d/yy` 形式で JSON に出力されます。ご注意ください。
