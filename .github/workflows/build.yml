@@ -25,9 +25,15 @@ jobs:
         with:
           input_dir: './'
 
+      - name: show files in current directory
+        run: ls -la
+
       - name: Convert CSV to GeoJSON
         run: for file in *.csv; { csv2geojson "$file" > ./$(basename -s ".csv" $file).json; }
 
+      - name: show files in current directory
+        run: ls -la
+        
       - name: Deploy the GeoJSON to `gh-pages`
         uses: peaceiris/actions-gh-pages@v3
         with:
