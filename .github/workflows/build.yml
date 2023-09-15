@@ -15,27 +15,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Run `npm install -g csv2geojson`
         run: npm install -g csv2geojson
 
       - name: 'Convert Excel to CSV'
-        uses: geolonia/excel-to-csv-action@main
+        uses: geolonia/excel-to-csv-action@v0.0.1
         with:
           input_dir: './'
 
       - name: get current directory
         run: pwd
 
-      - name: show files in current directory
-        run: ls -la
-
       - name: Convert CSV to GeoJSON
         run: for file in *.csv; { csv2geojson "$file" > ./$(basename -s ".csv" $file).json; }
-
-      - name: show files in current directory
-        run: ls -la
 
       - name: Deploy the GeoJSON to `gh-pages`
         uses: peaceiris/actions-gh-pages@v3
