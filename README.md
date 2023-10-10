@@ -8,7 +8,7 @@ Geolonia Maps なら以下のような簡単なマークアップで地図に表
 <div class="geolonia" data-geojson="<GeoJSON の URL>"></div>
 ```
 
-デモ: https://codepen.io/geolonia/pen/RwgJjmE
+デモ: https://codepen.io/geolonia/pen/oNJmZOj
 
 ## ご利用方法
 
@@ -41,7 +41,7 @@ Geolonia Maps なら以下のような簡単なマークアップで地図に表
 <div class="geolonia" data-geojson="<GeoJSON の URL>"></div>
 ```
 
-デモ: https://codepen.io/geolonia/pen/RwgJjmE
+デモ: https://codepen.io/geolonia/pen/oNJmZOj
 
 [詳しくは Geolonia Maps ドキュメンテーションを御覧ください。](https://docs.geolonia.com/)
 
